@@ -58,7 +58,6 @@ export class MediaController {
     }
 
 
-
     player.on('error', this.errorCallback);
     player.on('stateChange', this.stateChangeCallback);
     player.on('timeUpdate', this.timeUpdateCallback);
@@ -231,8 +230,7 @@ export class MediaController {
    * Play next music.
    */
   public async playNext() {
-    hilog.info(audioDomain, audioPrefix,
-      'playNext Index:' + this.musicIndex + ', length-1:' + (this.musicList.length - 1));
+    hilog.info(audioDomain, audioPrefix, `playNext Index:${this.musicIndex}, length-1:${this.musicList.length - 1}`);
     if (!this.player) {
       hilog.error(audioDomain, audioPrefix, 'player is undefined playNext');
       return;
@@ -251,7 +249,7 @@ export class MediaController {
    */
   public async playPrevious() {
     hilog.info(audioDomain, audioPrefix,
-      'playPrevious Index:' + this.musicIndex + ', length-1:' + (this.musicList.length - 1));
+      `playPrevious Index:${this.musicIndex}, length-1:${this.musicList.length - 1}`);
     if (!this.player) {
       hilog.error(audioDomain, audioPrefix, 'audioRenderer is undefined playPrevious');
       return;
@@ -340,7 +338,7 @@ export class MediaController {
   }
 
   private updateMusicIndex(musicIndex: number) {
-    hilog.info(audioDomain, audioPrefix, 'updateMusicIndex ===> ' + musicIndex);
+    hilog.info(audioDomain, audioPrefix, `updateMusicIndex ===> ${musicIndex}`);
     AppStorage.setOrCreate('selectIndex', musicIndex);
     if (this.musicIndex !== musicIndex) {
       this.musicIndex = musicIndex;

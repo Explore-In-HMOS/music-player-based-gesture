@@ -8,11 +8,7 @@ import { PlaybackPage } from './PlaybackPage';
 @Component
 struct Index {
   private viewModel: MainViewModel = new MainViewModel();
-  @State musicData: MusicModel[] = [];
-
-  @State message: string = 'onDigitalCrown';
-  @State cumulativeDegree: number = 0;
-  @State threshold: number = 10;
+  private musicData: MusicModel[] = [];
 
   aboutToAppear(): void {
     this.musicData = this.viewModel.getMusicList();

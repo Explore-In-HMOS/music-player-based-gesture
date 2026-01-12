@@ -18,8 +18,7 @@ export struct PlaybackPage {
   @StorageLink('progress') value: number = 0;
   @StorageLink('progressMax') max: number = 0;
   @State cumulativeDegree: number = 0;
-  @State threshold: number = 10;
-  @State volume: number = 50;
+  private threshold: number = 10;
   @State progressValue: number = 0;
   @State totalValue: number = 0;
   @State minValue: number = 0;

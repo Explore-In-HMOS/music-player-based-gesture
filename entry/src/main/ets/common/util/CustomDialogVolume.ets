@@ -6,7 +6,7 @@ export struct CustomDialogVolume {
   @Prop totalValue: number = 0
   @Prop minValue: number = 0
   @State cumulativeDegree: number = 0;
-  @State threshold: number = 10;
+  private threshold: number = 10;
   controller: CustomDialogController = new CustomDialogController({
     builder: CustomDialogVolume()
   })
@@ -22,7 +22,6 @@ export struct CustomDialogVolume {
       Row() {
         Image($r('app.media.ic_volume'))
           .width(30)
-          .margin({right:12})
           .onClick(() => {
             this.progressValue -= 1
             this.checkProgressValue();
@@ -30,7 +29,7 @@ export struct CustomDialogVolume {
         Progress({ value: this.progressValue, total: this.totalValue, type: ProgressType.Capsule })
           .width(100)
           .height(40)
-          .color($r('app.color.orange'))
+          .color(Color.Pink)
           .margin(4)
           .focusable(true)
           .focusOnTouch(true)
@@ -57,7 +56,6 @@ export struct CustomDialogVolume {
 
         Image($r('app.media.ic_volume_medium'))
           .width(27)
-          .margin({left:12})
           .onClick(() => {
             this.progressValue += 1
             this.checkProgressValue();

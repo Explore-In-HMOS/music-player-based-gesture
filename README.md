@@ -8,9 +8,9 @@ You can navigate between buttons, play/pause, skip tracks, or adjust volume — 
 # Preview
 
 <div>
-  <img src="screenshots/ss1.png" width="25%">
-  <img src="screenshots/ss2.png" width="25%">
-  <img src="screenshots/ss3.png" width="25%">
+  <img src="screenshots/ss1.png" width="24%">
+  <img src="screenshots/ss2.png" width="24%">
+  <img src="screenshots/ss3.png" width="24%">
 </div>
 
 # Use Cases
